@@ -20,30 +20,26 @@
     <?php if (!User::id()): ?>
         <div class="starter-template">
             <h1>Для входа нажмите на нужную социальную сеть</h1>
-            <?php foreach ($socials as $key => $social):?>
+            <?php foreach ($socials as $key => $social): ?>
                 <a href="<?php echo $social; ?>" class="btn btn-primary btn-lg active"
-                   role="button"><?php echo ucfirst($key);?></a>
-            <?php endforeach;?>
+                   role="button"><?php echo ucfirst($key); ?></a>
+            <?php endforeach; ?>
         </div>
     <?php endif; ?>
     <div class='row'>
         <div class='col-md-2'></div>
         <div class='col-md-8'>
-        <ul>
-            <div id='content'>
-                <?php echo $comments; ?>
-            </div>
-        </ul>
+            <ul>
+                <div id='content'>
+                    <?php echo $comments; ?>
+                </div>
+            </ul>
         </div>
         <div class='col-md-2'></div>
     </div>
 </div>
-
-<div id='load'>
-    <div>Загрузить еще</div>
-    <img src='/images/loading.gif' id='imgLoad'>
+<div id="end">
 </div>
-
 
 <div class='modal fade modal-comment' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'
      aria-hidden='true'>
@@ -66,7 +62,9 @@
                     </div>
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' onclick="modal_close()" class='btn btn-default' data-dismiss='modal'>Завкрыть</button>
+                    <button type='button' onclick="modal_close()" class='btn btn-default' data-dismiss='modal'>
+                        Завкрыть
+                    </button>
                     <button type='submit' class='btn btn-primary'>Отправить</button>
                 </div>
             </form>

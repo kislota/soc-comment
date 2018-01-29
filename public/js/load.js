@@ -1,25 +1,20 @@
-$(document).ready(function () {
-    $("#imgLoad").hide();
-});
 var num = 5;
-$(function () {
-    $("#load div").click(function () {
-        $("#imgLoad").show();
-        $.ajax({
-            url: "/comment/load",
-            type: "POST",
-            data: {"num": num},
-            cache: false,
-            success: function (response) {
-                if (response == 0) {
-                    alert("Больше нет комментариев");
-                    $("#imgLoad").hide();
-                } else {
-                    $("#content").append(response);
-                    num = num + 5;
-                    $("#imgLoad").hide();
-                }
-            }
+jQuery(window).scroll(function() {
+    var end = jQuery('#end').offset().top;
+    if(jQuery(window).scrollTop()+jQuery(window).height()>=jQuery(document).height()){
+        $(function () {
+                $.ajax({
+                    url: "/comment/load",
+                    type: "POST",
+                    data: {"num": num},
+                    cache: false,
+                    success: function (response) {
+                        if (response != 0) {
+                            $("#content").append(response);
+                            num = num + 5;
+                        }
+                    }
+                });
         });
-    });
+    }
 });
