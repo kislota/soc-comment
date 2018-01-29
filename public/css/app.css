@@ -1,0 +1,70 @@
+body {
+    padding-top: 50px;
+}
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+#load {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+#load div {
+    margin: 5px;
+    cursor: pointer;
+    background: #6483aa;
+    color: #fff;
+    padding: 4px 10px 4px 10px;
+    border: 1px solid #2f4561;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* Comments */
+
+img {
+    width: 25px;
+}
+div.comment{
+    margin: 0 auto;
+}
+
+div.comments_wrap ul
+{
+    list-style-type: none;
+}
+
+div.comments_wrap ul li
+{
+    margin: 7px 0 7px 7px;
+}
+
+div.comments_wrap ul li div.comment
+{
+    border: solid 1px #ccc;
+    padding: 5px 10px;
+}
+
+div.comments_wrap ul li div.author
+{
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+div.comments_wrap ul li div.author span.date
+{
+    padding-left: 20px;
+
+}
+
+div.comments_wrap ul li div.comment_text
+{
+    overflow: auto;
+}
