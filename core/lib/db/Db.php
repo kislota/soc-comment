@@ -17,6 +17,7 @@ class Db
     {
         $this->config = Config::instace();
         $this->db = new PDO('mysql:host=' . $this->config->db['host'] . ';dbname=' . $this->config->db['dbname'] . '', $this->config->db['user'], $this->config->db['password']);
+        $this->db->exec("set names utf8");
     }
 
     /**
