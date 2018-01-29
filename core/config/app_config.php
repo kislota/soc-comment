@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'default_controller' => 'Comment',
+    'default_controller' => 'Comment', //Default controller
 ];
